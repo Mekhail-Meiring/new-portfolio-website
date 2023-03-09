@@ -31,14 +31,15 @@ const Icons = styled.div`
 
 `;
 
-const Logo = styled.img`
-    height: 170px;
-
-`;
 
 const Icon = styled.img`
     width: 20px;
     cursor: pointer;
+    
+`;
+
+const Logo = styled.img`
+    height: 170px;
 
 `;
 
@@ -87,7 +88,7 @@ export const Navbar = () => {
                 </List>
             </Links>
             <Icons>
-                <Icon src='./img/search.png' />
+                <Icon src='./img/icons/search.png' />
                 <Button>Hire Now</Button>
             </Icons>
         </NavContainer>

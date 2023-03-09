@@ -29,11 +29,11 @@ const HeroLeft = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  padding-left: 100px;
+  padding-left: 200px;
 `;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 30px;
   font-family: 'Montserrat', sans-serif;
 `;
 
@@ -45,15 +45,16 @@ const Info = styled.div`
 `;
 
 const Line = styled.img`
-  height: 5px;
+  height: 2px;
 `;
 
 const SubTitle = styled.h2`
   color: #08f1a4;
+  font-size: 17px;
 `;
 
 const Description = styled.p`
-  font-size: 20px;
+  font-size: 15px;
 `;
 
 const Button = styled.button`
@@ -75,8 +76,8 @@ const HeroRight = styled.div`
 `;
 
 const Img = styled.img`
-  width: 700px;
-  height: 400px;
+  width: 500px;
+  height: 300px;
   object-fit: contain;
   top: 0;
   right: 0;
@@ -85,9 +86,9 @@ const Img = styled.img`
   margin: auto;
   position: absolute;
 
-  animation: animate 2s infinite ease alternate;
+  animation: animateImg 2s infinite ease alternate;
 
-  @keyframes animate {
+  @keyframes animateImg {
     100% {
       transform: translateY(-20px);
     }
@@ -107,7 +108,7 @@ export const Hero = () => {
           <Info>
             <Line src="./img/line.png" />
             <SubTitle>
-              Developer
+              Software Developer
             </SubTitle>
           </Info>
           <Description>
