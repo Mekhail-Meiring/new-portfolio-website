@@ -13,14 +13,13 @@ const Section = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 769px) {
-        height: 200vh;
+        height: 115vh;
     }
-
 `; 
 
 const HeroContainer = styled.div`
   margin-top: 50px;
-  height: 100vh;
+  height: 100%;
   scroll-snap-align: center;
   width: 1300px;
   display: flex;
@@ -29,9 +28,7 @@ const HeroContainer = styled.div`
 
   @media only screen and (max-width: 769px) {
         width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column-reverse;
     }
 `;
 
@@ -45,6 +42,7 @@ const HeroLeft = styled.div`
 
   @media only screen and (max-width: 769px) {
         flex:1;
+        padding: 10px;
     }
 `;
 
@@ -94,28 +92,16 @@ const HeroRight = styled.div`
 
   @media only screen and (max-width: 769px) {
         flex: 1;
+        height: 30%;
+        width: 60%;
     }
 `;
 
-const Img = styled.img`
-  width: 500px;
-  height: 300px;
-  object-fit: contain;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  margin: auto;
-  position: absolute;
-
-  animation: animateImg 2s infinite ease alternate;
-
-  @keyframes animateImg {
-    100% {
-      transform: translateY(-20px);
-    }
-  }
+const LinkTo = styled.a`
+  text-decoration: none;
+  color: #070707;
 `;
+
 
 
 export const Hero = () => {
@@ -137,7 +123,9 @@ export const Hero = () => {
             Hi there! I'm a software developer with a passion for solving 
             complex problems and creating intuitive, user-friendly applications.
           </Description>
-          <Button>See My Work</Button>
+          <Button>
+            <LinkTo href="#projects">See my projects</LinkTo>
+          </Button>
         </HeroLeft>
 
         <HeroRight>

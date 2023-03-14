@@ -61,6 +61,13 @@ const WorksContainer = styled.div`
   display: flex;
   justify-content: space-between;
   transform: translateY(-40px);
+  @media only screen and (max-width: 769px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const WorksLeft = styled.div`
@@ -68,6 +75,7 @@ const WorksLeft = styled.div`
   display: flex;
   align-items: center;
   padding: 150px;
+  
 `;
 
 const List = styled.ul`
@@ -90,7 +98,9 @@ const ListItem = styled.li`
 
 const WorksRight = styled.div`
   flex: 1;
-
+  @media only screen and (max-width: 769px) {
+    display: none;
+  }
 `;
 
 const Icons = styled.div`
@@ -154,7 +164,7 @@ export const Skills = () => {
   const [work, setWork] = useState("Python");
 
   return (
-    <Section>
+    <Section id='skills'>
       <Title>
         Skills
       </Title>

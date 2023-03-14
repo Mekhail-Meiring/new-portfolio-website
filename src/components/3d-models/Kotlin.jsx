@@ -10,20 +10,9 @@ export default function Model(props) {
   const { nodes, materials } = useGLTF('./models/kotlin-transformed.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Curve012.geometry} material={materials['SVGMat.009']} position={[-2.49, 0, 0]} rotation={[1.59, 0, -0.04]} scale={518.19}>
-        <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.001']} />
-        <mesh geometry={nodes.Curve002.geometry} material={materials['SVGMat.003']} />
-        <mesh geometry={nodes.Curve003.geometry} material={materials['SVGMat.004']} />
-        <mesh geometry={nodes.Curve004.geometry} material={materials['SVGMat.006']} />
-        <mesh geometry={nodes.Curve005.geometry} material={materials['SVGMat.006']} />
-        <mesh geometry={nodes.Curve006.geometry} material={materials['SVGMat.007']} />
-        <mesh geometry={nodes.Curve007.geometry} material={materials['SVGMat.008']} />
-        <mesh geometry={nodes.Curve008.geometry} material={materials['SVGMat.009']} />
-        <mesh geometry={nodes.Curve009.geometry} material={materials['SVGMat.010']} />
-        <mesh geometry={nodes.Curve010.geometry} material={materials['SVGMat.011']} />
-        <mesh geometry={nodes.Curve011.geometry} material={materials['SVGMat.008']} scale={[0.35, 0.5, 0.34]} />
-        <mesh geometry={nodes.Curve013.geometry} material={materials['SVGMat.010']} />
-        <mesh geometry={nodes.Curve014.geometry} material={materials['SVGMat.011']} />
+      <mesh geometry={nodes.Curve011.geometry} material={materials['SVGMat.013']} position={[-4.74, -1.28, 0.8]} rotation={[1.57, 0.02, -0.01]} scale={742.92}>
+        <mesh geometry={nodes.Curve.geometry} material={materials['SVGMat.002']} />
+        <mesh geometry={nodes.Curve001.geometry} material={materials['SVGMat.003']} />
       </mesh>
     </group>
   )

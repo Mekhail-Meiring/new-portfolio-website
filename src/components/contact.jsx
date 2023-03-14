@@ -15,6 +15,14 @@ const ContactContainer = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 50px;
+
+  @media only screen and (max-width: 769px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
 `;
 
 const ContactLeft = styled.div`
@@ -24,6 +32,10 @@ const ContactLeft = styled.div`
   justify-content: center;
   align-items: center;
   padding-left: 100px;
+
+  @media only screen and (max-width: 769px) {
+    padding-left: 0;
+  }
 `;
 
 const Title = styled.h1`
@@ -35,6 +47,9 @@ const Form = styled.form`
   flex-direction: column;
   gap: 20px;
   width: 500px;
+  @media only screen and (max-width: 769px) {
+    width: 100%;
+  }
 `;
 
 const Input = styled.input`
@@ -81,6 +96,9 @@ const Button = styled.button`
 
 const ContactRight = styled.div`
   flex: 1;
+  @media only screen and (max-width: 769px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`
@@ -137,7 +155,7 @@ export const Contact = () => {
   }
 
   return (
-    <Section>
+    <Section id='contact'>
       <ContactContainer>
         <ContactLeft>
           <Title>Get in touch</Title>

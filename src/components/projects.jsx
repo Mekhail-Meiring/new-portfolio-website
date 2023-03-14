@@ -11,31 +11,37 @@ import 'swiper/css/navigation';
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  padding: 4rem 1rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Heading = styled.h1`
   padding: 1rem 0;
   font-size: 3.5rem;
   text-align: center;
+  @media only screen and (max-width: 769px) {
+    font-size: 2rem;
+  }
 `;
 
 const projects = [
   {
     id: 1,
-    image: "",
-    title: "",
+    image: "./img/WebWorkFlow.png",
+    title: "WebWorkFlow",
   },
   {
     id: 2,
-    image: "",
-    title: "",
+    image: "./img/room-finder.png",
+    title: "Room-Finder",
   },
   {
     id: 3,
-    image: "",
-    title: "",
+    image: "./img/the-main-events.png",
+    title: "The-Main-Events",
   },
 ]
 
@@ -44,7 +50,7 @@ const projects = [
 export const Projects = () => {
 
   return (
-    <Container>
+    <Container id="projects">
       <Heading>Projects</Heading>
       <Swiper
         effect={"coverflow"}
@@ -57,7 +63,6 @@ export const Projects = () => {
           depth: 100,
           modifier: 2.5,
         }}
-        // spaceBetween={30}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -73,6 +78,11 @@ export const Projects = () => {
         {projects.map((project) => (
           <SwiperSlide key={project.id}>
               <img src={project.image} alt={project.title} />
+              <p style={
+                {
+                  textAlign: "center",
+                }
+              }>{project.title}</p>
           </SwiperSlide>
         ))}
         <div className="slider-controler">

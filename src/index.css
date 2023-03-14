@@ -20,17 +20,17 @@ body {
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 769px) {
   .swiper_container {
-    height: 47rem;
+    height: 15rem;
   }
   .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 9rem !important;
+    height: 9rem !important;
   }
   .swiper-slide img {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 9rem !important;
+    height: 9rem !important;
   }
 }
 
