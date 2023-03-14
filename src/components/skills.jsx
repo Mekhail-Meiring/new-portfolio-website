@@ -1,53 +1,48 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styled from 'styled-components'
+
+import Java from './skills/java'
+import Javascript from './skills/javascript'
+import Kotlin from './skills/kotlin'
+import Python from './skills/python'
+import Reactjs from './skills/react'
+import SpringBoot from './skills/spring-boot'
 
 
 const skills = [
   {
     id: 1,
-    icon: "./img/icons/backend.png",
-    title: "Backend Development", 
-  },
-
-  {
-    id: 2,
-    icon: "./img/icons/frontend.png",
-    title: "Frontend Development",
-  },
-
-  {
-    id: 3,
     icon: "./img/icons/python.png",
     title: "Python",
   },
 
   {
-    id: 4,
+    id: 2,
     icon: "./img/icons/java.png",
     title: "Java",
   },
 
   {
-    id: 5,
+    id: 3,
     icon: "./img/icons/javascript.png",
-    title: "JavaScript",
+    title: "Javascript",
   },
 
   {
-    id: 6,
+    id: 4,
     icon: "./img/icons/kotlin.png",
     title: "Kotlin",
   },
 
   {
-    id: 7,
+    id: 5,
     icon: "./img/icons/react.png",
     title: "React",
   },
 
   {
-    id: 8,
+    id: 6,
     icon: "./img/icons/springboot.png",
     title: "Springboot",
   },
@@ -57,20 +52,22 @@ const skills = [
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
-  display: flex;
   justify-content: center;
+  text-align: center;
 `; 
 
 const WorksContainer = styled.div`
   width: 1300px;
   display: flex;
   justify-content: space-between;
+  transform: translateY(-40px);
 `;
 
 const WorksLeft = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  padding: 150px;
 `;
 
 const List = styled.ul`
@@ -93,6 +90,7 @@ const ListItem = styled.li`
 
 const WorksRight = styled.div`
   flex: 1;
+
 `;
 
 const Icons = styled.div`
@@ -140,22 +138,54 @@ const Skill = styled.div`
 
 `;
 
+const Title = styled.h1`
+  display: inline-block;
+  transform: translateY(70px);
+  position: relative;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 0;
+`
 
-export const Works = () => {
+
+export const Skills = () => {
+
+  const [work, setWork] = useState("Python");
+
   return (
     <Section>
+      <Title>
+        Skills
+      </Title>
       <WorksContainer>
         <WorksLeft>
           <List>
             {skills.map((skill) => (
-              <ListItem key={skill.id} >
+              <ListItem key={skill.id} onClick={() => {setWork(skill.title)}}>
                   <Icon src={skill.icon} />
                   <Skill text={skill.title}>{skill.title}</Skill>
               </ListItem>
             ))}
           </List>
         </WorksLeft>
-        <WorksRight></WorksRight>
+        <WorksRight>
+
+          {work === "Python" ? (
+            <Python />
+          ) : work === "Java" ? (
+            <Java />
+          ) : work === "Javascript" ? (
+            <Javascript />
+          ) : work === "Kotlin" ? (
+            <Kotlin />
+          ) : work === "React" ? (
+            <Reactjs />
+          ) :  (
+            <SpringBoot />
+          )}
+
+        </WorksRight>
       </WorksContainer>
     </Section>
   )

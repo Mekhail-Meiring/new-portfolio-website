@@ -5,14 +5,20 @@ const Section = styled.div`
     display: flex;
     justify-content: center;
     height: 50px;
+    @media only screen and (max-width: 769px) {
+        width: 100%;
+    }
 `;
 
 const NavContainer = styled.div`
     width: 870px;
-    padding: 50px 0;
+    padding: 50px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 769px) {
+        width: 100%;
+    }
 `;
 
 const Links = styled.div`
@@ -47,6 +53,9 @@ const List = styled.ul`
     display: flex;
     gap: 20px;
     list-style: none;
+    @media only screen and (max-width: 769px) {
+        display: none;
+    }
 `;
 
 const ListItem = styled.li`
@@ -81,15 +90,13 @@ export const Navbar = () => {
             <Links>
                 <Logo src='./img/logo.png' />
                 <List>
-                    <ListItem>Home</ListItem>
-                    <ListItem>Studio</ListItem>
-                    <ListItem>Works</ListItem>
-                    <ListItem>Contact</ListItem>
+                    <ListItem>About</ListItem>
+                    <ListItem>Skills</ListItem>
+                    <ListItem>Experience</ListItem>
                 </List>
             </Links>
             <Icons>
-                <Icon src='./img/icons/search.png' />
-                <Button>Hire Now</Button>
+                <Button>Contact</Button>
             </Icons>
         </NavContainer>
     </Section>

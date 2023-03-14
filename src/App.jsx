@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import { Contact } from './components/contact'
 import { Hero } from './components/hero'
 import { Introduction } from './components/introduction'
-import { Works } from './components/works'
+import { Skills } from './components/skills'
+import { Projects } from './components/projects'
 import styled from 'styled-components'
 
 
@@ -21,12 +21,14 @@ const Container = styled.div`
 
 
 function App() {
+  
 
   return (
     <Container>
       <Hero />
       <Introduction />
-      <Works />
+      <Skills />
+      <Projects />
       <Contact />
     </Container>
   )

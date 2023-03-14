@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import MyProfile from './my-profile';
 import { Navbar } from './navbar';
 
 
@@ -11,6 +12,10 @@ const Section = styled.div`
   justify-content: space-between;
   align-items: center;
 
+  @media only screen and (max-width: 769px) {
+        height: 200vh;
+    }
+
 `; 
 
 const HeroContainer = styled.div`
@@ -21,6 +26,13 @@ const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 769px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const HeroLeft = styled.div`
@@ -30,6 +42,10 @@ const HeroLeft = styled.div`
   justify-content: center;
   gap: 20px;
   padding-left: 200px;
+
+  @media only screen and (max-width: 769px) {
+        flex:1;
+    }
 `;
 
 const Title = styled.h1`
@@ -73,6 +89,12 @@ const Button = styled.button`
 const HeroRight = styled.div`
   flex: 3;
   position: relative;
+  height: 100%;
+  
+
+  @media only screen and (max-width: 769px) {
+        flex: 1;
+    }
 `;
 
 const Img = styled.img`
@@ -119,8 +141,7 @@ export const Hero = () => {
         </HeroLeft>
 
         <HeroRight>
-          {/* 3d model */}
-          <Img src="./img/spaceman.png" />
+          <MyProfile />
         </HeroRight>
       </HeroContainer>
     </Section>

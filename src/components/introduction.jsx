@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { MeshDistortMaterial, OrbitControls, Sphere } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 
 const Section = styled.div`
   height: 100vh;
@@ -22,6 +23,8 @@ const IntroContainer = styled.div`
 
 const IntroLeft = styled.div`
   flex: 1;
+  position: relative;
+  height: 700px;
 `;
 
 const Title = styled.h1`
@@ -74,6 +77,25 @@ const Icon = styled.img`
     transition: all 0.5s ease;
 `;
 
+const Img = styled.img`
+  width: 500px;
+  height: 300px;
+  object-fit: contain;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+
+  animation: ImgAnimation 2s infinite ease alternate;
+
+  @keyframes ImgAnimation {
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+`;
 
 
 export const Introduction = () => {
@@ -83,7 +105,15 @@ export const Introduction = () => {
       <IntroContainer>
 
         <IntroLeft>
-          {/* 3d model */}
+          <Canvas>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={0.1} />
+              <directionalLight position={[2,3,1]} />
+              <Sphere args={[1,100,200]} scale={2}>
+              <MeshDistortMaterial color="#08f1a4" attach='material' distort={0.5} speed={2}/>
+              </Sphere>
+          </Canvas>
+          <Img src="./img/spaceman.png" />
         </IntroLeft>
 
         <IntroRight>
@@ -109,6 +139,7 @@ export const Introduction = () => {
           <Icons>
                 <Icon src='./img/icons/linkedin.png' />
                 <Icon src='./img/icons/instagram.png' />
+                <Icon src='./img/icons/github.png' />
             </Icons>
         </IntroRight>
       </IntroContainer>

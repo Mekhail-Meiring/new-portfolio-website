@@ -1,5 +1,7 @@
-import React from 'react'
+import React, {useRef, useState} from 'react'
 import styled from 'styled-components'
+import Map from './map';
+import emailjs from '@emailjs/browser';
 
 
 const Section = styled.div`
@@ -117,6 +119,23 @@ const Text = styled.div``;
 
 
 export const Contact = () => {
+
+  const form = useRef();
+
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_ed1vmoj', 'template_tq616hd', form.current, 'aUzjj2vlYtfjA6uEZ')
+      .then((result) => {
+          console.log(result.text);
+          setSuccess(true);
+      }, (error) => {
+          console.log(error.text);
+          setSuccess(false);
+      });
+  }
+
   return (
     <Section>
       <ContactContainer>
@@ -125,27 +144,31 @@ export const Contact = () => {
           <List>
             <ListItem>
               <Icon src="./img/icons/call.png" />
-              <Text>+27 82 391 0788</Text>
+              <Text>+27 62 095 7463</Text>
             </ListItem>
             <ListItem>
               <Icon src="./img/icons/gmail.png" />
               <Text>123mekhailmeiring@gmail.com</Text>
             </ListItem>
             <ListItem>
-              <Form>
-                <Input type="text" placeholder="Name" />
-                <Input type="text" placeholder="Email" />
-                <TextArea placeholder="Message" rows={8}/>
-                <Button>
+              <Form ref={form} onSubmit={handleSubmit}>
+                <Input type="text" placeholder="Name" name='name'/>
+                <Input type="text" placeholder="Email" name='email'/>
+                <TextArea placeholder="Message" rows={8} name='message'/>
+                <Button type='submit'>
                   <Text>Send</Text>
                   <Icon src="./img/icons/send.png" style={{width: "25px"}}/>
                 </Button>
+                {success && <span>Thanks, I'll reply ASAP :)</span>}
               </Form>
             </ListItem>
           </List>
         </ContactLeft>
 
-        <ContactRight></ContactRight>
+        <ContactRight>
+          <Map />
+        </ContactRight>
+        
       </ContactContainer>
     </Section>
   )
