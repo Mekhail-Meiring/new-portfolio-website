@@ -148,7 +148,7 @@ const Img = styled.img`
   }
 `;
 
-export const Introduction = () => {
+const Introduction = () => {
   return (
     <Section id="about">
       <IntroContainer>
@@ -213,3 +213,5 @@ export const Introduction = () => {
     </Section>
   );
 };
+
+export default Introduction;

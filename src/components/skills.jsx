@@ -159,7 +159,7 @@ const Title = styled.h1`
 `
 
 
-export const Skills = () => {
+const Skills = () => {
 
   const [work, setWork] = useState("Python");
 
@@ -200,3 +200,6 @@ export const Skills = () => {
     </Section>
   )
 }
+
+
+export default Skills;

@@ -136,7 +136,7 @@ const Icon = styled.img`
 const Text = styled.div``;
 
 
-export const Contact = () => {
+const Contact = () => {
 
   const form = useRef();
 
@@ -191,3 +191,5 @@ export const Contact = () => {
     </Section>
   )
 }
+
+export default Contact;

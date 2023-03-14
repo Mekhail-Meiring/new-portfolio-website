@@ -47,7 +47,7 @@ const projects = [
 
 
 
-export const Projects = () => {
+const Projects = () => {
 
   return (
     <Container id="projects">
@@ -97,3 +97,5 @@ export const Projects = () => {
     </Container>
   );
 };
+
+export default Projects;
