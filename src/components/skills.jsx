@@ -75,6 +75,11 @@ const WorksLeft = styled.div`
   display: flex;
   align-items: center;
   padding: 150px;
+
+  @media only screen and (max-width: 769px) {
+    text-align: center;
+    justify-content: center;
+  }
   
 `;
 

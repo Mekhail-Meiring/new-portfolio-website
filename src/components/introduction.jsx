@@ -35,8 +35,8 @@ const IntroLeft = styled.div`
   position: relative;
   height: 700px;
   @media only screen and (max-width: 769px) {
-   height: 100px;
-   width: 60%;
+   height: 70px;
+   width: 70%;
    padding: 0;
   }
 `;
@@ -60,7 +60,7 @@ const IntroRight = styled.div`
     align-items: center;
     text-align: center;
     gap: 5px;
-    transform: translateY(-50px);
+    transform: translateY(-80px);
   }
 `;
 

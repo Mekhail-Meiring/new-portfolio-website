@@ -1,8 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import MyProfile from './my-profile';
-import { Navbar } from './navbar';
-
+import React from "react";
+import styled from "styled-components";
+import MyProfile from "./my-profile";
+import { Navbar } from "./navbar";
 
 const Section = styled.div`
   height: 100vh;
@@ -13,9 +12,9 @@ const Section = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 769px) {
-        height: 115vh;
-    }
-`; 
+    height: 115vh;
+  }
+`;
 
 const HeroContainer = styled.div`
   margin-top: 50px;
@@ -27,9 +26,11 @@ const HeroContainer = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 769px) {
-        width: 100%;
-        flex-direction: column-reverse;
-    }
+    height: 100%;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
 `;
 
 const HeroLeft = styled.div`
@@ -41,21 +42,24 @@ const HeroLeft = styled.div`
   padding-left: 200px;
 
   @media only screen and (max-width: 769px) {
-        flex:1;
-        padding: 10px;
-    }
+    flex: 1;
+    padding: 0px 10px;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    transform: translateY(-60px);
+  }
 `;
 
 const Title = styled.h1`
   font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const Info = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-
 `;
 
 const Line = styled.img`
@@ -79,22 +83,21 @@ const Button = styled.button`
   cursor: pointer;
   width: 150px;
   :hover {
-        transform: scale(1.1);
-    }
-    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
+  transition: all 0.5s ease;
 `;
 
 const HeroRight = styled.div`
   flex: 3;
   position: relative;
   height: 100%;
-  
 
   @media only screen and (max-width: 769px) {
-        flex: 1;
-        height: 30%;
-        width: 60%;
-    }
+    flex: 1;
+    height: 20%;
+    width: 50%;
+  }
 `;
 
 const LinkTo = styled.a`
@@ -102,25 +105,20 @@ const LinkTo = styled.a`
   color: #070707;
 `;
 
-
-
 export const Hero = () => {
   return (
     <Section>
       <Navbar />
 
       <HeroContainer>
-
         <HeroLeft>
           <Title>I'm Mekhail Meiring</Title>
           <Info>
             <Line src="./img/line.png" />
-            <SubTitle>
-              Software Developer
-            </SubTitle>
+            <SubTitle>Software Developer</SubTitle>
           </Info>
           <Description>
-            Hi there! I'm a software developer with a passion for solving 
+            Hi there! I'm a software developer with a passion for solving
             complex problems and creating intuitive, user-friendly applications.
           </Description>
           <Button>
@@ -133,5 +131,5 @@ export const Hero = () => {
         </HeroRight>
       </HeroContainer>
     </Section>
-  )
-}
+  );
+};
