@@ -3537,8 +3537,8 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
   align-items: center;
 
   @media only screen and (max-width: 769px) {
-        height: 115vh;
-    }
+    height: 115vh;
+  }
 `,LH=dn.div`
   margin-top: 50px;
   height: 100%;
@@ -3549,9 +3549,11 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
   align-items: center;
 
   @media only screen and (max-width: 769px) {
-        width: 100%;
-        flex-direction: column-reverse;
-    }
+    height: 100%;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
 `,RH=dn.div`
   flex: 2;
   display: flex;
@@ -3561,17 +3563,20 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
   padding-left: 200px;
 
   @media only screen and (max-width: 769px) {
-        flex:1;
-        padding: 10px;
-    }
+    flex: 1;
+    padding: 0px 10px;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    transform: translateY(-60px);
+  }
 `,IH=dn.h1`
   font-size: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 `,DH=dn.div`
   display: flex;
   align-items: center;
   gap: 10px;
-
 `,FH=dn.img`
   height: 2px;
 `,kH=dn.h2`
@@ -3587,20 +3592,19 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
   cursor: pointer;
   width: 150px;
   :hover {
-        transform: scale(1.1);
-    }
-    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
+  transition: all 0.5s ease;
 `,zH=dn.div`
   flex: 3;
   position: relative;
   height: 100%;
-  
 
   @media only screen and (max-width: 769px) {
-        flex: 1;
-        height: 30%;
-        width: 60%;
-    }
+    flex: 1;
+    height: 20%;
+    width: 50%;
+  }
 `,UH=dn.a`
   text-decoration: none;
   color: #070707;
@@ -3619,7 +3623,7 @@ vec3 texelOld = texture2D(previousShadowMap, vUv).rgb;
   @media only screen and (max-width: 769px) {
     font-size: 2rem;
   }
-`,w9=[{id:1,image:"./img/WebWorkFlow.png",title:"WebWorkFlow"},{id:2,image:"./img/room-finder.png",title:"Room-Finder"},{id:3,image:"./img/the-main-events.png",title:"The-Main-Events"}],A9=()=>Ye.jsxs(S9,{id:"projects",children:[Ye.jsx(M9,{children:"Projects"}),Ye.jsxs(JB,{effect:"coverflow",grabCursor:!0,centeredSlides:!0,slidesPerView:"auto",coverflowEffect:{rotate:0,stretch:0,depth:100,modifier:2.5},autoplay:{delay:2500,disableOnInteraction:!1},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev",clickable:!0},modules:[l9,f9,a9,o9],className:"swiper_container",children:[w9.map(n=>Ye.jsxs(jB,{children:[Ye.jsx("img",{src:n.image,alt:n.title}),Ye.jsx("p",{style:{textAlign:"center"},children:n.title})]},n.id)),Ye.jsxs("div",{className:"slider-controler",children:[Ye.jsx("div",{className:"swiper-button-prev slider-arrow",children:Ye.jsx("ion-icon",{name:"arrow-back-outline"})}),Ye.jsx("div",{className:"swiper-button-next slider-arrow",children:Ye.jsx("ion-icon",{name:"arrow-forward-outline"})})]})]})]}),C9=Y.lazy(()=>E_(()=>import("./introduction-2ffaaa32.js"),[])),E9=Y.lazy(()=>E_(()=>import("./skills-42f39fcb.js"),[])),T9=Y.lazy(()=>E_(()=>import("./contact-9a9e83d0.js"),[])),b9=dn.div`
+`,w9=[{id:1,image:"./img/WebWorkFlow.png",title:"WebWorkFlow"},{id:2,image:"./img/room-finder.png",title:"Room-Finder"},{id:3,image:"./img/the-main-events.png",title:"The-Main-Events"}],A9=()=>Ye.jsxs(S9,{id:"projects",children:[Ye.jsx(M9,{children:"Projects"}),Ye.jsxs(JB,{effect:"coverflow",grabCursor:!0,centeredSlides:!0,slidesPerView:"auto",coverflowEffect:{rotate:0,stretch:0,depth:100,modifier:2.5},autoplay:{delay:2500,disableOnInteraction:!1},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev",clickable:!0},modules:[l9,f9,a9,o9],className:"swiper_container",children:[w9.map(n=>Ye.jsxs(jB,{children:[Ye.jsx("img",{src:n.image,alt:n.title}),Ye.jsx("p",{style:{textAlign:"center"},children:n.title})]},n.id)),Ye.jsxs("div",{className:"slider-controler",children:[Ye.jsx("div",{className:"swiper-button-prev slider-arrow",children:Ye.jsx("ion-icon",{name:"arrow-back-outline"})}),Ye.jsx("div",{className:"swiper-button-next slider-arrow",children:Ye.jsx("ion-icon",{name:"arrow-forward-outline"})})]})]})]}),C9=Y.lazy(()=>E_(()=>import("./introduction-4ec94747.js"),[])),E9=Y.lazy(()=>E_(()=>import("./skills-e48d9147.js"),[])),T9=Y.lazy(()=>E_(()=>import("./contact-8e353f07.js"),[])),b9=dn.div`
   height: 100vh;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
